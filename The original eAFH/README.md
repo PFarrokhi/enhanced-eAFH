@@ -1,5 +1,5 @@
 # Steps to install zephyr RTOS on windows
-
+For building your zephyr RTOS on windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one.
 
 # Install west:
 py -m pip install -U "west==1.2.0"
