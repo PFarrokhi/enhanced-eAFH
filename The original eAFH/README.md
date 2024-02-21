@@ -6,3 +6,15 @@ For embedding the original eAFH into the installed zephyr RTOS on windows, just 
 wget https://github.com/PFarrokhi/enhanced-eAFH/edit/main/The%20original%20eAFH/zephyr3.5-changes
 xcopy zephyr3.5-changes\* zephyr3.5\ -Y
 ```
+
+## Build the eAFH for a board
+```
+west build --pristine -b nrf52840dk_nrf52840 apps/sample_eAFH
+```
+
+## Boot the built eAFH files to your board
+```
+west flash
+```
+
+NOTE: For more information about the different configurations of eAFH please visit the original website (https://github.com/ds-kiel/eAFH).
