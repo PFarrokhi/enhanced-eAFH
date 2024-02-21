@@ -32,12 +32,13 @@ py -m pip install -r zephyr\scripts\requirements.txt
 cd ..
 wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.5/zephyr-sdk-0.16.5_windows-x86_64.7z
 7z x zephyr-sdk-0.16.5_windows-x86_64.7z
-zephyr-sdk-0.16.5\setup.cmd
+cd zephyr-sdk-0.16.5
+setup.cmd
 ```
 
 ## Build a sample the application for a board:
 ```
-cd zephyr_3.6\zephyr
+cd ..\zephyr_3.6\zephyr
 west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
 ```
 
