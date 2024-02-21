@@ -8,12 +8,12 @@ py -m pip install -U "west==1.2.0"
 
 ## Initialize west directory:
 ```
-west init -m https://github.com/zephyrproject-rtos/zephyr --mr v3.5.0 zephyr_3.5
+west init -m https://github.com/zephyrproject-rtos/zephyr --mr v3.5.0 zephyr-3.5
 ```
 
 ## Go into the built directory and update it:
 ```
-cd zephyr_3.5
+cd zephyr-3.5
 west update
 ```
 
@@ -38,7 +38,7 @@ setup.cmd
 
 ## Build a sample the application for a board:
 ```
-cd ..\zephyr_3.6\zephyr
+cd ..\zephyr-3.5\zephyr
 west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
 ```
 
