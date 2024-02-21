@@ -20,3 +20,9 @@ west flash
 ```
 
 **NOTE:** For more information about the different configurations of eAFH please visit the original website (https://github.com/ds-kiel/eAFH).
+
+# Changed files
+Some files are changed to make eAFH compatible with Zephyr RTOS v3.5
+
+## zephyr\subsys\bluetooth\Kconfig
+This file has been changed a lot in the Zephyr RTOS v3.5. So, the main file is used and the changes of eAFH has been inserted to lines 219 to 241.
