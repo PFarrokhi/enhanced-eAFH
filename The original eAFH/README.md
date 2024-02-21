@@ -10,6 +10,7 @@ xcopy zephyr-3.5-changes\* zephyr-3.5\ -Y
 
 ## Build the eAFH for a board
 ```
+cd zephyr-3.5\zephyr
 west build --pristine -b nrf52840dk_nrf52840 apps/sample_eAFH
 ```
 
