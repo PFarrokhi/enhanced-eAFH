@@ -4,5 +4,5 @@ For embedding the original eAFH into the installed zephyr RTOS on windows, just 
 ## Get the changed files of eAFH compare to the original Zephyr files:
 ```
 wget https://github.com/PFarrokhi/enhanced-eAFH/edit/main/The%20original%20eAFH/zephyr3.5-changes
-copy -r zephyr3.5-changes\* zephyr3.5\
+xcopy zephyr3.5-changes\* zephyr3.5\ -Y
 ```
