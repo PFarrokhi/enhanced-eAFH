@@ -17,4 +17,4 @@ west build --pristine -b nrf52840dk_nrf52840 apps/sample_eAFH
 west flash
 ```
 
-NOTE: For more information about the different configurations of eAFH please visit the original website (https://github.com/ds-kiel/eAFH).
+**NOTE:** For more information about the different configurations of eAFH please visit the original website (https://github.com/ds-kiel/eAFH).
