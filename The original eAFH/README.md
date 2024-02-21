@@ -29,3 +29,6 @@ This file has been changed a lot in the Zephyr RTOS v3.5. So, the main file is u
 
 ## zephyr\subsys\bluetooth\controller\CMakeLists.txt
 This file has been changed a lot in the Zephyr RTOS v3.5. So, the main file is used and the changes of eAFH has been inserted to lines 148 to 164.
+
+## apps\sample_eAFH\src\main.c
+<zephyr.h> is depricated. So, it is changed to <zephyr/kernel.h>
