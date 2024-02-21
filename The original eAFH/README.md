@@ -1,4 +1,4 @@
-# Steps to embed the original eAFH into the installed zephyr RTOS on windows
+# Steps for embedding the original eAFH into the installed Zephyr RTOS on windows
 For embedding the original eAFH into the installed zephyr RTOS on windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one.
 
 ## Get the changed files of eAFH compare to the original Zephyr files:
