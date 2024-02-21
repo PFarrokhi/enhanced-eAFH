@@ -1,4 +1,4 @@
-# Steps to install zephyr RTOS on windows
+# Steps to install Zephyr RTOS on windows for an example run
 For building your zephyr RTOS on windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one.
 
 ## Install west:
