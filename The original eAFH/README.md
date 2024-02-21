@@ -34,5 +34,5 @@ cd ..\zephyr_3.6\zephyr
 
 west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
 
-# transfer the built files into the board:
+# Transfer the built files into the board:
 west flash
