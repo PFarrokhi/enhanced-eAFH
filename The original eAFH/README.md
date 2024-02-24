@@ -32,3 +32,6 @@ This file has been changed a lot in the Zephyr RTOS v3.5. So, the main file is u
 
 ## apps\sample_eAFH\src\main.c
 Some libraries has been changed. Changed void main(void) to int main(int argc, char** argv), added a return 0 to the end of the main and changed the existing returns to return -1 to reduce warnings.
+
+## zephyr\subsys\bluetooth\controller\ll_sw\ull.c
+Some libraries has been changed.
