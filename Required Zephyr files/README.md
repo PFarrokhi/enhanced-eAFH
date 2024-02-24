@@ -89,7 +89,7 @@ west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
 On Linux:
 ```
 cd zephyr-2.4/zephyr
-west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
+west build --pristine -b nrf52840dk_nrf52840 samples/basic/blinky
 ```
 
 ## Transfer the built files into the board:
