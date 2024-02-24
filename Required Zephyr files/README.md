@@ -1,19 +1,50 @@
 # Steps to install Zephyr RTOS on windows for an example run
-For building your zephyr RTOS on windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one.
+For building your zephyr RTOS on Windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one. For Linux, do it on the Linux termianl.
+
+## Install requirements:
+On Linux:
+```
+sudo apt update
+sudo apt upgrade -y 
+wget https://apt.kitware.com/kitware-archive.sh
+sudo bash kitware-archive.sh
+sudo apt install -y --no-install-recommends git cmake ninja-build gperf \
+  ccache dfu-util device-tree-compiler wget \
+  python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
+  make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1
+```
 
 ## Install west:
+On Windows:  
 ```
 py -m pip install -U "west==1.2.0"
 ```
+On Linux:  
+```
+pip3 install --user -U west
+echo 'export PATH=~/.local/bin:"$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 ## Initialize west directory:
+On Windows:
 ```
 west init -m https://github.com/zephyrproject-rtos/zephyr --mr v3.5.0 zephyr-3.5
 ```
+On Linux:
+```
+west init -m https://github.com/zephyrproject-rtos/zephyr --mr v2.4.0 zephyr-2.4
+```
 
 ## Go into the built directory and update it:
+On Windows:
 ```
 cd zephyr-3.5
+west update
+```
+On Linux:
+```
+cd zephyr-2.4
 west update
 ```
 
@@ -23,11 +54,17 @@ west zephyr-export
 ```
 
 ## Build requirements:
+On Windows:
 ```
 py -m pip install -r zephyr\scripts\requirements.txt
 ```
+On Linux:
+```
+pip3 install -r zephyr\scripts\requirements.txt
+```
 
 ## Install the required SDK beside Zephyr RTOS:
+On Windows:
 ```
 cd ..
 wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.5/zephyr-sdk-0.16.5_windows-x86_64.7z
@@ -35,10 +72,23 @@ wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.5/zeph
 cd zephyr-sdk-0.16.5
 setup.cmd
 ```
+On Linux:
+```
+cd ..
+wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run
+sudo chmod +X zephyr-sdk-0.11.4-setup.run
+./zephyr-sdk-0.11.4-setup.run
+```
 
 ## Build a sample the application for a board:
+On Windows:
 ```
 cd ..\zephyr-3.5\zephyr
+west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
+```
+On Linux:
+```
+cd zephyr-2.4\zephyr
 west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
 ```
 
