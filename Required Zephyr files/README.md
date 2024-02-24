@@ -96,3 +96,8 @@ west build --pristine -b nrf52840dk_nrf52840 samples/basic/blinky
 ```
 west flash
 ```
+
+**NOTE:** nrfilink is necessary for "west flash" command. Install it on your PC using this link:
+```
+https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack
+```
