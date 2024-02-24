@@ -97,7 +97,7 @@ west build --pristine -b nrf52840dk_nrf52840 samples/basic/blinky
 west flash --runner jlink
 ```
 
-**NOTE:** "nrfilink" is necessary for "west flash" command. Install it using this link:
+**NOTE:** "nrfjprog" is necessary for "west flash" command. Install it using this link:
 ```
 https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/download
 ```
