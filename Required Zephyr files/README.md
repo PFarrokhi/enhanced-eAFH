@@ -76,7 +76,7 @@ On Linux:
 ```
 cd ..
 wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run
-sudo chmod +X zephyr-sdk-0.11.4-setup.run
+chmod +x zephyr-sdk-0.11.4-setup.run
 ./zephyr-sdk-0.11.4-setup.run
 ```
 
