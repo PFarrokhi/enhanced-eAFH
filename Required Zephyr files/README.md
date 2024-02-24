@@ -21,7 +21,7 @@ py -m pip install -U "west==1.2.0"
 ```
 On Linux:  
 ```
-pip3 install --user -U west
+pip3 install --user -U "west==1.2.0"
 echo 'export PATH=~/.local/bin:"$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
