@@ -60,7 +60,7 @@ py -m pip install -r zephyr\scripts\requirements.txt
 ```
 On Linux:
 ```
-pip3 install -r zephyr\scripts\requirements.txt
+pip3 install -r zephyr/scripts/requirements.txt
 ```
 
 ## Install the required SDK beside Zephyr RTOS:
