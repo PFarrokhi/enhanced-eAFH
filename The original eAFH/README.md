@@ -1,5 +1,21 @@
-# Steps for embedding the original eAFH into the installed Zephyr RTOS on windows
-For embedding the original eAFH into the installed zephyr RTOS on windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one.
+# Steps for embedding the original eAFH into the installed Zephyr RTOS on Linux
+For embedding the original eAFH into the installed zephyr RTOS on Linux, just run a terimnal in your installation directory and run the following commands one-by-one.
+
+## Get eAFH and copy the changed files into the original Zephyr RTOS
+```
+git clone https://github.com/ds-kiel/eAFH.git
+cp -r eAFH/src/app zephyr-2.4/
+cp -r eAFH/src/zephyr/* zephyr-2.4/zephyr/
+```
+
+## Build the program
+```
+cd zephyr-2.4/zephyr/
+west build --pristine -b nrf52840dk_nrf52840 ../apps/sample_eAFH
+```
+
+# Steps for embedding the original eAFH into the installed Zephyr RTOS on Windows
+For embedding the original eAFH into the installed zephyr RTOS on Windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one.
 
 ## Get the changed files of eAFH compare to the original Zephyr files:
 ```
