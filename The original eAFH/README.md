@@ -31,4 +31,4 @@ This file has been changed a lot in the Zephyr RTOS v3.5. So, the main file is u
 This file has been changed a lot in the Zephyr RTOS v3.5. So, the main file is used and the changes of eAFH has been inserted to lines 148 to 164.
 
 ## apps\sample_eAFH\src\main.c
-Some libraries has been changed. Changed void main(void) to int main(int argc, char** argv) to reduce warnings.
+Some libraries has been changed. Changed void main(void) to int main(int argc, char** argv) and added a return 0 to the main to reduce warnings.
