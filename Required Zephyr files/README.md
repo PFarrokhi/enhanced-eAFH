@@ -105,7 +105,7 @@ https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/dow
 ```
 nrfutil pkg generate --hw-version 52 --sd-req=0x00 \
   --application build/zephyr/zephyr.hex \
-  --application-version 1 blinky.zip
+  --application-version 1 program.zip
 sudo chmod a+rw /dev/ttyACM0
-nrfutil dfu usb-serial -pkg blinky.zip -p /dev/ttyACM0
+nrfutil dfu usb-serial -pkg program.zip -p /dev/ttyACM0
 ```
