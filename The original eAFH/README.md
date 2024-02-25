@@ -13,6 +13,7 @@ cp -r eAFH/src/zephyr/* zephyr-2.4/zephyr/
 cd zephyr-2.4/zephyr/
 west build --pristine -b nrf52840dk_nrf52840 ../apps/sample_eAFH
 ```
+**NOTE:** The CMakeLists.txt contains "set(SHIELD ssd1306_128x32)" which prevents compilation on a hardware like nRF52840 dongle. It can be removed for compilation on the other hardwares.
 
 # Steps for embedding the original eAFH into the installed Zephyr RTOS on Windows
 For embedding the original eAFH into the installed zephyr RTOS on Windows, just run a "Command Prompt" terimnal in your installation directory and run the following commands one-by-one.
