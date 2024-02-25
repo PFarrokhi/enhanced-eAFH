@@ -104,7 +104,7 @@ https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/dow
 **NOTE:** The "west flash" command will not necessarily work for every device. Check the "Supported Boards" documentation of "Zephyr Project" for more details. For example, the following commands are needed to run for nRF52840 dongle:
 ```
 nrfutil pkg generate --hw-version 52 --sd-req=0x00 \
-  -- application build/zephyr/zephyr.hex \
-  --aplication-version 1 blinky.zip
+  --application build/zephyr/zephyr.hex \
+  --application-version 1 blinky.zip
 nrfutil dfu usb-serial -pkg blinky.zip -p /dev/ttyACM0
 ```
