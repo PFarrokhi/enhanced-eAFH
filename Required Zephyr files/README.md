@@ -114,7 +114,7 @@ sudo chmod a+rw /dev/ttyACM0
 nrfutil dfu usb-serial -pkg program.zip -p /dev/ttyACM0
 ```
 
-# Steps toward a sample hearrate application
+# Steps toward a sample heartrate application
 The eAFH and enhanced eAFH implementation is based on the zephyr/samples/bluetooth/central_hr and zephyr/samples/bluetooth/peripheral_hr. However, they are combined in the eAFH implementation and both are integrated into the apps/sample_eAFH code. Then, each device understands its duty according to its hardware address. Although it works fine with nRF52840DK boards used in eAFH evaluation, there is no printing output for a hardware like nRF52840 dongle which we used in the enhanced eAFH implementation. We describe bellow the way to build the separated files on a nRF52840DK and a nRF52840 dongle on Windows 11. We will use the dongle for the peripheral part, and the development kit for the central part.
 
 ## Step 1: Initialize the environment
