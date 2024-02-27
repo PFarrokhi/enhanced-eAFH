@@ -80,7 +80,7 @@ chmod +x zephyr-sdk-0.11.4-setup.run
 ./zephyr-sdk-0.11.4-setup.run
 ```
 
-## Build a sample the application for a board:
+## Build a sample blinky application for a board:
 On Windows:
 ```
 cd ..\zephyr-3.5\zephyr
@@ -112,4 +112,37 @@ On Linux:
 nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/zephyr.hex --application-version 1 program.zip
 sudo chmod a+rw /dev/ttyACM0
 nrfutil dfu usb-serial -pkg program.zip -p /dev/ttyACM0
+```
+
+#Steps toward a sample hearrate application
+The eAFH and enhanced eAFH implementation is based on the zephyr/samples/bluetooth/central_hr and zephyr/samples/bluetooth/peripheral_hr. However, they are combined in the eAFH implementation and both are integrated into the apps/sample_eAFH code. Then, each device understands its duty according to its hardware address. Although it works fine with nRF52840DK boards used in eAFH evaluation, there is no printing output for a hardware like nRF52840 dongle which we used in the enhanced eAFH implementation. We describe bellow the way to build the separated files on a nRF52840DK and a nRF52840 dongle on Windows 11. We will use the dongle for the peripheral part, and the development kit for the central part.
+
+## Step 1: Initialize the environment
+Copy the zephyr/samples/bluetooth/central_hr and zephyr/samples/bluetooth/peripheral_hr directories to the apps/ folder. Then, open a command prompt and go to the zephyr directory.
+## Step 2: Build the peripheral part
+If you want to see the output of this part, first build it for the DK and connect to it using "nRF Connect for Desktop Bluetooth Low Energy" and the dongle. If you want to do this, follow the instructions bellow. Otherwise, jump to **Step 2.1**.
+### Step 2.1: Build the peripheral part for nRF52840DK
+First, connect the dongle to "nRF Connect for Desktop Bluetooth Low Energy" by pressing the RESET button.
+Second, build and flash the peripheral_hr for the DK using the commands bellow and connect the DK to a serial monitor.
+```
+west build --pristine -b nrf52840dk_nrf52840 peripheral_hr
+west flash
+```
+Third, scan for the DK and connect to it.
+### Step 2.2: Build the peripheral part for nRF52840 dongle
+Build and flash the peripheral_hr for the dongle using the commands bellow.
+```
+west build --pristine -b nrf52840dongle_nrf52840 peripheral_hr
+nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/zephyr.hex --application-version 1 program.zip
+nrfutil dfu usb-serial -pkg program.zip -p COM10
+```
+## Step 3: Build the central part
+build and flash the central_hr for the DK using the commands bellow and connect the DK to a serial monitor.
+```
+west build --pristine -b nrf52840dk_nrf52840 central_hr
+west flash
+```
+for reviewing the reults you can press the RESET button **ON THE DK** or entering the following command.
+```
+nrfjprog --reset
 ```
