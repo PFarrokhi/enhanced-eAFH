@@ -94,7 +94,7 @@ west build --pristine -b nrf52840dk_nrf52840 samples/basic/blinky
 
 ## Transfer the built files into the board:
 ```
-west flash --runner jlink
+west flash
 ```
 
 **NOTE:** "nrfjprog" is necessary for "west flash" command. Install it using this link:
