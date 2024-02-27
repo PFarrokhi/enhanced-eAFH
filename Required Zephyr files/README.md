@@ -137,12 +137,14 @@ nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/ze
 nrfutil dfu usb-serial -pkg program.zip -p COM10
 ```
 ## Step 3: Build the central part
-build and flash the central_hr for the DK using the commands bellow and connect the DK to a serial monitor.
+Build and flash the central_hr for the DK using the commands bellow and connect the DK to a serial monitor.
 ```
 west build --pristine -b nrf52840dk_nrf52840 central_hr
 west flash
 ```
-for reviewing the reults you can press the RESET button **ON THE DK** or entering the following command.
+For reviewing the reults you can press the RESET button **ON THE DK** or entering the following command.
 ```
 nrfjprog --reset
 ```
+The following image is a sample output after reset.
+![image](https://github.com/PFarrokhi/enhanced-eAFH/assets/50174354/c5f7ef10-c3f4-4466-9469-b73d22fbe0f3)
