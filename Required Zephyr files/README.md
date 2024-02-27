@@ -102,6 +102,12 @@ west flash --runner jlink
 https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/download
 ```
 **NOTE:** The "west flash" command will not necessarily work for every device. Check the "Supported Boards" documentation of "Zephyr Project" for more details. For example, the following commands are needed to run for nRF52840 dongle:
+On Windows:
+```
+nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/zephyr.hex --application-version 1 program.zip
+nrfutil dfu usb-serial -pkg program.zip -p COM8
+```
+On Linux:
 ```
 nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/zephyr.hex --application-version 1 program.zip
 sudo chmod a+rw /dev/ttyACM0
