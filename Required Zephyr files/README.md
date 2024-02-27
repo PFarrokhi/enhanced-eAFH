@@ -105,7 +105,7 @@ https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/dow
 On Windows:
 ```
 nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/zephyr.hex --application-version 1 program.zip
-nrfutil dfu usb-serial -pkg program.zip -p COM8
+nrfutil dfu usb-serial -pkg program.zip -p COM10
 ```
 On Linux:
 ```
