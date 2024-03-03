@@ -31,7 +31,7 @@ xcopy zephyr-changes\* zephyr-3.5\ -Y
 The changed files of eAFH are changed again to make eAFH compatible with Zephyr RTOS v3.5
 
 ## zephyr\subsys\bluetooth\Kconfig
-The changes of eAFH has been inserted to lines 219 to 241.
+The lines 264 to 280 of eAFH has been inserted to line 203 of Zephyr.
 
 ## zephyr\subsys\bluetooth\controller\CMakeLists.txt
 The changes of eAFH has been inserted to lines 148 to 164.
