@@ -36,13 +36,9 @@ The lines 256 to 280 of eAFH has been inserted to line 203 of Zephyr.
 ## zephyr\subsys\bluetooth\controller\CMakeLists.txt
 The lines 81 to 97 of eAFH has been inserted to line 172 of Zephyr.
 
-## apps\sample_eAFH\src\main.c
-Some libraries has been changed. Changed void main(void) to int main(int argc, char** argv), added a return 0 to the end of the main and changed the existing returns to return -1 to reduce warnings.
-
 ## zephyr\subsys\bluetooth\controller\ll_sw\ull.c
-The following changes of eAFH has been inserted:  
-Inserted #include "ull_afh.h" to line 49 of Zephyr RTOS v3.5.  
-Inserted ull_afh_init() from line 368 to 373 of eAFH to line 734 of Zephyr RTOS v3.5.  
+The line 42 of eAFH has been inserted to line 50 of Zephyr.
+The lines 368 t0 to 373 of eAFH has been inserted to line 735 of Zephyr.
 
 ## zephyr\subsys\bluetooth\controller\ll_sw\afh_impl\eAFH.c
 Some libraries has been changed.
