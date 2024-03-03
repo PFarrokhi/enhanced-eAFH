@@ -37,7 +37,7 @@ The lines 256 to 280 of eAFH has been inserted to line 203 of Zephyr.
 The lines 81 to 97 of eAFH has been inserted to line 172 of Zephyr.
 
 ## zephyr\subsys\bluetooth\controller\ll_sw\ull.c
-The line 42 of eAFH has been inserted to line 50 of Zephyr.
+The line 42 of eAFH has been inserted to line 50 of Zephyr.  
 The lines 368 t0 to 373 of eAFH has been inserted to line 735 of Zephyr.
 
 ## zephyr\subsys\bluetooth\controller\ll_sw\afh_impl\eAFH.c
