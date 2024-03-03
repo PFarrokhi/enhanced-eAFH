@@ -28,7 +28,7 @@ xcopy zephyr-changes\* zephyr-3.5\ -Y
 **NOTE:** For more information about the different configurations of eAFH please visit the original website (https://github.com/ds-kiel/eAFH).
 
 # Changed files
-The changed files of eAFH are changed again to make eAFH compatible with Zephyr RTOS v3.5
+The basic Zephyr RTOS v3.5 is used and changed some files according to the eAFH project. Note that the round robin channel selection is not implemented from eAFH.
 
 ## zephyr\subsys\bluetooth\Kconfig
 The lines 264 to 280 of eAFH has been inserted to line 203 of Zephyr.
