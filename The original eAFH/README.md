@@ -31,7 +31,7 @@ xcopy zephyr-changes\* zephyr-3.5\ -Y
 The basic Zephyr RTOS v3.5 is used and changed some files according to the eAFH project. Note that the round robin channel selection is not implemented from eAFH.
 
 ## zephyr\subsys\bluetooth\Kconfig
-The lines 264 to 280 of eAFH has been inserted to line 203 of Zephyr.
+The lines 256 to 280 of eAFH has been inserted to line 203 of Zephyr.
 
 ## zephyr\subsys\bluetooth\controller\CMakeLists.txt
 The lines 81 to 97 of eAFH has been inserted to line 172 of Zephyr.
