@@ -13,7 +13,7 @@ cp -r eAFH/src/zephyr/* zephyr-2.4/zephyr/
 cd zephyr-2.4/zephyr/
 west build --pristine -b nrf52840dk_nrf52840 ../apps/sample_eAFH
 ```
-**NOTE:** The CMakeLists.txt contains "set(SHIELD ssd1306_128x32)" which prevents compilation on a hardware like nRF52840 dongle. It can be removed for compilation on the other hardwares. For further information for Linux installation visit the eAFH page.
+**NOTE:** The CMakeLists.txt contains "set(SHIELD ssd1306_128x32)" which prevents compilation on a hardware like nRF52840 dongle. It can be removed for compilation on the other hardwares. For further information for Linux installation visit the eAFH page (https://github.com/ds-kiel/eAFH).
 
 # Steps for embedding the original eAFH into the installed Zephyr RTOS on Windows
 For embedding the original eAFH into the installed zephyr RTOS on Windows, the v2.4 which is used by eAFH is not compatible with Windows. So, we will use the v3.5 which is the latest stable version at this time. According to the huge changes of v3.5 compared to v2.4, we will use the original Zephyr project and change or add some files according to the README.md of eAFH project.
