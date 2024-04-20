@@ -46,6 +46,10 @@ The lines 165 to 172 of eAFH has been inserted to line 164 of Zephyr.
 The lines 341 to 355 of eAFH has been inserted to line 463 of Zephyr.  
 The lines 364 to 371 of eAFH has been inserted to line 470 of Zephyr.  
 
+## zephyr\subsys\bluetooth\controller\ll_sw\lll_conn.c
+The lines 70 to 83 of eAFH has been inserted to line 155 of Zephyr.  
+
+
 # Added files
 The following added files by the eAFH are not compatible with Zephyr RTOS v3.5. 
 - `zephyr/subsys/bluetooth/controller/ll_sw/ull_afh.h`
