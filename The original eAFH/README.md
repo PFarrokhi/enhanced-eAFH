@@ -5,6 +5,8 @@ The installation of eAFH on Windows face problems as it will miss some libraries
 
 2- Install it using the linux terminal
 
+For the guides of using the eAFH, refere to the original eAFH page (https://github.com/ds-kiel/eAFH).
+
 ## Install eAFH using the VS code extention
 In this scenario we used Ubuntu 20 and the latest versions of each program. For building the eAFH do the following steps one-by-one.
 
