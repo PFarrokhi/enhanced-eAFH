@@ -1,11 +1,13 @@
+# The original eAFH
+
+the "eAFH" folder is a mirror of files available in the original eAFH page (https://github.com/ds-kiel/eAFH) for preventing any conflicts of implemented "enhanced eAFH" with the future changes of the original eAFH. For its installation, you can whether refer to the original page or use the following guides and the "eAFH" folder.
+
 # Steps for embedding the original eAFH into the installed Zephyr RTOS on Linux
 The installation of eAFH on Windows face problems as it will miss some libraries. However, for its istallation on Linux you will have two options:
 
 1- Install it using the new VS code extention (recommended)
 
 2- Install it using the linux terminal
-
-For the guides of using the eAFH, refere to the original eAFH page (https://github.com/ds-kiel/eAFH).
 
 ## Install eAFH using the VS code extention
 In this scenario we used Ubuntu 20 and the latest versions of each program. For building the eAFH do the following steps one-by-one.
