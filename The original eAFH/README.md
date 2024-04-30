@@ -60,31 +60,17 @@ cd zephyr-2.4
 west update
 ```
 
-## Initialize cmake files:
+### Step 5: Initialize cmake files:
 ```
 west zephyr-export
 ```
 
-## Build requirements:
-On Windows:
-```
-py -m pip install -r zephyr\scripts\requirements.txt
-```
-On Linux:
+### Step 6: Build requirements:
 ```
 pip3 install -r zephyr/scripts/requirements.txt
 ```
 
-## Install the required SDK beside Zephyr RTOS:
-On Windows:
-```
-cd ..
-wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.5/zephyr-sdk-0.16.5_windows-x86_64.7z
-7z x zephyr-sdk-0.16.5_windows-x86_64.7z
-cd zephyr-sdk-0.16.5
-setup.cmd
-```
-On Linux:
+### Step 7: Install the required SDK beside Zephyr RTOS:
 ```
 cd ..
 wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run
@@ -92,19 +78,12 @@ chmod +x zephyr-sdk-0.11.4-setup.run
 ./zephyr-sdk-0.11.4-setup.run
 ```
 
-## Build a sample blinky application for a board:
-On Windows:
+### Step 8: Build the application for a board:
 ```
-cd ..\zephyr-3.5\zephyr
-west build --pristine -b nrf52840dk_nrf52840 samples\basic\blinky
-```
-On Linux:
-```
-cd zephyr-2.4/zephyr
 west build --pristine -b nrf52840dk_nrf52840 samples/basic/blinky
 ```
 
-## Transfer the built files into the board:
+### Step 9: Transfer the built files into the board:
 ```
 west flash
 ```
@@ -113,13 +92,8 @@ west flash
 ```
 https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/download
 ```
+
 **NOTE:** The "west flash" command will not necessarily work for every device. Check the "Supported Boards" documentation of "Zephyr Project" for more details. For example, the following commands are needed to run for nRF52840 dongle:
-On Windows:
-```
-nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/zephyr.hex --application-version 1 program.zip
-nrfutil dfu usb-serial -pkg program.zip -p COM10
-```
-On Linux:
 ```
 nrfutil pkg generate --hw-version 52 --sd-req=0x00 --application build/zephyr/zephyr.hex --application-version 1 program.zip
 sudo chmod a+rw /dev/ttyACM0
