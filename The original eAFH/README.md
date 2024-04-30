@@ -1,6 +1,26 @@
 # Steps for embedding the original eAFH into the installed Zephyr RTOS on Linux
-For embedding the original eAFH into the installed zephyr RTOS on Linux, just run a terimnal in your installation directory and run the following commands one-by-one.
+The installation of eAFH on Windows face problems as it will miss some libraries. However, for its istallation on Linux you will have two options:
 
+1- Install it using the new VS code extention (recommended)
+
+2- Install it using the command line
+
+## Install eAFH using the VS code extention
+In this scenario we used Ubuntu 20 and the latest versions of each program. For building the eAFH do the following steps one-by-one.
+### Step 1: Install VS code
+Simply download your favourite version from https://code.visualstudio.com/download and install it.
+### Step 2: Install the nRF Connect extension
+From the extentions tab of VS code, search for "nRF Connect for VS Code Extension Pack" and install it.
+### Step 3: Install the toolchains
+From the nRF Connect extention, install the latest toolchain using the "Manage toolchains".
+### Step 4: Clone eAFH
+From "View->Command Palette..." (Ctrl+Shift+P), run the "Git: Clone" command and enter the original eAFH repository address (https://github.com/ds-kiel/eAFH.git). After clonning it, open its src/ folder in the VS code.
+### Step 5: Update the workspace
+From the nRF Connect extension, run "west update" using the "Manage west workspace".
+### Step 6: Manage your build configurations
+From the nRF Connect extention, manage your build configurations according to your board.
+### Step 7: Install the rest of tools
+Some tools are needed which some can be installed using the suggestions of VS code, or can be installed from the Nordic website. Try to build the project and flash the program to your board to find the rest of the required packages like the "nRF Command Line Tools" (https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download).
 ## Get eAFH and copy the changed files into the original Zephyr RTOS
 ```
 git clone https://github.com/ds-kiel/eAFH.git
