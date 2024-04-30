@@ -90,10 +90,9 @@ west build --pristine -b nrf52840dk_nrf52840 samples/basic/blinky
 west flash
 ```
 
-**NOTE:** "nrfjprog" is necessary for "west flash" command. Install it using this link:
-```
+**NOTE:** "nrfjprog" is necessary for "west flash" command. Install it using the following link:
+
 https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools/download
-```
 
 **NOTE:** The "west flash" command will not necessarily work for every device. Check the "Supported Boards" documentation of "Zephyr Project" for more details. For example, the following commands are needed to run for nRF52840 dongle:
 ```
