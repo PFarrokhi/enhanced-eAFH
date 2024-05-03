@@ -29,6 +29,7 @@ From the nRF Connect extension, run "west update" using the "Manage west workspa
 
 ### Step 6: Manage your build configurations
 From the nRF Connect extention, open the application from the "existing application" of "applications", and manage your build configurations according to your board.
+
 **NOTE**: You might want to remove "set(SHIELD ssd1306_128x32)" part from the "CMakeLists.txt" of the application for your board.
 
 ### Step 7: Install the rest of tools
