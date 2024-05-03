@@ -28,7 +28,7 @@ From "View->Command Palette..." (Ctrl+Shift+P), run the "Git: Clone" command and
 From the nRF Connect extension, run "west update" using the "Manage west workspace".
 
 ### Step 6: Manage your build configurations
-From the nRF Connect extention, manage your build configurations according to your board.
+From the nRF Connect extention, open the application from the "existing application" of "applications", and manage your build configurations according to your board.
 
 ### Step 7: Install the rest of tools
 Some tools are needed which some can be installed using the suggestions of VS code, or can be installed from the Nordic website. Try to build the project and flash the program to your board to find the rest of the required packages like the "nRF Command Line Tools" (https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download).
