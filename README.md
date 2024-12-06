@@ -1,4 +1,4 @@
-# enhanced-eAFH
+# enhanced-eAFH (e2AFH)
 This is a repository for an enhanced version of eAFH. The original version of eAFH is available in https://github.com/ds-kiel/eAFH. This repository has the following 3 parts:
 
 ## Part 1: Sample Heartrate (optional):
